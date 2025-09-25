@@ -1,0 +1,36 @@
+/* Apple-style animated gradient + frosted glass card */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg,#3a7bd5 0%,#3a6073 50%,#ff6ec4 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientShift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  background: rgba(255,255,255,0.1);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {font-weight: 600; margin-bottom: .5rem;}
+h2 {margin-top: 1.5rem; font-weight: 600;}
+a {color: #fff; text-decoration: none; border-bottom: 1px dotted #fff;}
+a:hover {border-bottom: 1px solid #fff;}
